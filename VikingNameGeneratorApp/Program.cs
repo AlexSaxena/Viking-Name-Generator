@@ -14,13 +14,13 @@ while (!nameValidator.Validate(nameInput))
     nameInput = Console.ReadLine();
 }
 
-Console.WriteLine("2. What is your gender? (M/F/Random)");
+Console.WriteLine("2. What is your gender? (M or F)");
 genderInput = Console.ReadLine();
 
 
 while (!genderValidator.Validate(genderInput))
 {
-    Console.WriteLine("Let's try again. What is your gender? (M/F/Random)");
+    Console.WriteLine("Let's try again. What is your gender? (M or F)");
     genderInput = Console.ReadLine();
 }
 

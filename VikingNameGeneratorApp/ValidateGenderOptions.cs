@@ -9,12 +9,12 @@ public class ValidateGenderOptions
         }
         genderInput = genderInput.ToLower();
 
-        if (genderInput == "m" || genderInput == "f" || genderInput == "random")
+        if (genderInput == "m" || genderInput == "f")
         {
             return true;
         }
 
-        Console.WriteLine("Invalid gender option. Please enter M, F, or Random.");
+        Console.WriteLine("Invalid gender option. Please enter M or F.");
         return false;
     }
 }
