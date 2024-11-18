@@ -5,6 +5,7 @@ var titleInput = "";
 var nameValidator = new ValidateName();
 var genderValidator = new ValidateGenderOptions();
 var titleValidator = new ValidateTitle();
+var nameGenerator = new VikingNameCombiner();
 
 Console.WriteLine("Hello Viking to be! \nPlease answer these quick questions to get your new Viking name!");
 
@@ -36,4 +37,6 @@ while (!titleValidator.Validate(titleInput))
     titleInput = Console.ReadLine();
 }
 
-Console.WriteLine($"You wrote: {nameInput}, Gender: {genderInput}, Title: {titleInput}");
+string vikingName = nameGenerator.GenerateName(nameInput, genderInput, titleInput);
+
+Console.WriteLine($"\nYour Viking name is: {vikingName}");
